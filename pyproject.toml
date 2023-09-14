@@ -1,0 +1,21 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Tuan Pham", email = "phamhoangtuan.it@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+lint = [
+    "blue>=0.9.1",
+    "mypy>=1.5.1",
+    "ruff>=0.0.289",
+]
+test = [
+    "pytest>=7.4.2",
+]
