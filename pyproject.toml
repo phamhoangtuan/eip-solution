@@ -5,7 +5,9 @@ description = ""
 authors = [
     {name = "Tuan Pham", email = "phamhoangtuan.it@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+    "loguru>=0.7.2",
+]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
@@ -19,3 +21,11 @@ lint = [
 test = [
     "pytest>=7.4.2",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+select = ["E", "F", "W", "C90", "I", "N", "PL", ]
+target-version = "py310"

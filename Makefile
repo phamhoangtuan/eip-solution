@@ -32,6 +32,6 @@ lint: lint-blue lint-ruff lint-mypy
 ##@ Tests
 
 test:
-	@pdm run pytest 
+	@pdm run pytest
 
 all: format lint test
