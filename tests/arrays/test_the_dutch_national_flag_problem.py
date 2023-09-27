@@ -1,4 +1,7 @@
-from src.arrays.the_dutch_national_flag_problem import dutch_flag_partition
+from src.arrays.the_dutch_national_flag_problem import (
+    dutch_flag_partition,
+    dutch_flag_partition_variant,
+)
 
 
 class TestDutchFlagPartition:
@@ -37,3 +40,30 @@ class TestDutchFlagPartition:
         pivot_index = 0
         dutch_flag_partition(pivot_index, arr)
         assert arr == [4, 3, 2, 1, 5]
+
+
+class TestDutchFlagPartitionVariant:
+    def test_empty_array(self):
+        arr = []
+        dutch_flag_partition_variant(arr)
+        assert arr == []
+
+    def test_single_element_array(self):
+        arr = [True]
+        dutch_flag_partition_variant(arr)
+        assert arr == [True]
+
+    def test_all_false_elements(self):
+        arr = [False, False, False, False]
+        dutch_flag_partition_variant(arr)
+        assert arr == [False, False, False, False]
+
+    def test_all_true_elements(self):
+        arr = [True, True, True, True]
+        dutch_flag_partition_variant(arr)
+        assert arr == [True, True, True, True]
+
+    def test_mixed_elements(self):
+        arr = [True, False, True, False, True, False]
+        dutch_flag_partition_variant(arr)
+        assert arr == [False, False, False, True, True, True]
